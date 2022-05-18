@@ -2,11 +2,8 @@ import React from 'react';
 
 import { View, Text, Image, ScrollView } from 'react-native';
 import styles from '../styles/style';
-import Space from '../components/Space';
-import Label from '../components/Label';
-import Panel from '../components/Panel';
 import IconButton from '../components/IconButton';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Summary from '../components/Summary';
 
 const Home = () => {
 
@@ -58,6 +55,14 @@ const Home = () => {
                     <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#1DCC70' iconColor='#FFFFFF' iconName='credit-card' label="Cards"/>
                     <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#FFB400' iconColor='#FFFFFF' iconName='exchange' label="Exchange"/>
                 </View>
+            </View>
+            <View style={{marginTop: 15, marginHorizontal: 17, flexDirection: 'row'}}>
+                <Summary label='Income' amount='552.95' amountColor='#1DCC70' />
+                <Summary label='Expense' amount='86.45' amountColor='#FF396F' />
+            </View>
+            <View style={{marginTop: 15, marginHorizontal: 17, flexDirection: 'row'}}>
+                <Summary label='Total Bills' amount='552.95' amountColor='#000' />
+                <Summary label='Savings' amount='86.45' amountColor='#000' />
             </View>
         </View> 
     )
