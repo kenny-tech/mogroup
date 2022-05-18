@@ -8,18 +8,15 @@ export default StyleSheet.create({
         marginRight: 54
     },
     button: {
-        alignItems: 'center',
+        alignItems: 'flex-start',
         backgroundColor: '#0037BA',
-        padding: 10,
         marginTop: 15,
-        marginLeft: 10,
-        marginRight: 10,
         borderRadius: 10,
         alignSelf: 'auto',
         width: 280,
         height: 52,
-        marginLeft: 54,
-        marginRight: 54
+        marginLeft: 25,
+        marginRight: 10
     },
     buttonText: {
         fontSize: 18,

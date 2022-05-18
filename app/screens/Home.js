@@ -2,105 +2,64 @@ import React from 'react';
 
 import { View, Text, Image, ScrollView } from 'react-native';
 import styles from '../styles/style';
-import Rate from '../components/Rate';
-import ImageSlider from '../components/ImageSlider';
-import SearchInput from '../components/SearhInput';
+import Space from '../components/Space';
+import Label from '../components/Label';
+import Panel from '../components/Panel';
+import IconButton from '../components/IconButton';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 const Home = () => {
 
     return (
-        <View style={{flex: 1, alignItems:'flex-start', backgroundColor:'#FFF'}}>
-            <View style={{backgroundColor: '#0037BA', width: '100%', height: 60, borderColor: '#0037BA'}}>
-                <SearchInput />
+        <View>
+            <View style={{alignItems:'flex-start', backgroundColor:'#0037BA'}}>
+                <View
+                    style={{
+                        width: 350,
+                        height: 120,
+                        borderTopLeftRadius: 10,
+                        borderTopRightRadius: 10,
+                        backgroundColor: '#FFFFFF',
+                        alignSelf: 'center'
+                    }}
+                >
+                    <View style={{flexDirection: 'row'}}>
+                        <View style={{marginRight: 85}}>
+                            <Text style={{paddingHorizontal: 15, paddingTop: 15, fontSize: 14}}>Total Balance</Text>
+                            <Text style={{paddingLeft: 15, paddingRight: 15, fontSize: 30, fontWeight: 'bold'}}>$2,562.50</Text>
+                        </View>
+                        <View>
+                            <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#EDEDF5' iconName='plus' />
+                        </View>
+                    </View>
+                    <View
+                        style={{
+                            borderBottomColor: '#D3D3D3',
+                            borderBottomWidth: 1,
+                            width: 310,
+                            alignSelf: 'center'
+                        }}
+                    />
+                </View>
             </View>
-           <Text style={styles.cardText}>Today's deal</Text> 
-            <View style={{alignSelf: 'center', flexDirection: 'row'}}>
-                <ImageSlider />
+            <View
+                style={{
+                    width: 350,
+                    height: 120,
+                    borderTopLeftRadius: 10,
+                    borderTopRightRadius: 10,
+                    backgroundColor: '#FFFFFF',
+                    alignSelf: 'center'
+                }}
+            >
+                <View style={{flexDirection: 'row', alignSelf: 'center'}}>
+                    <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#FF396F' iconColor='#FFFFFF' iconName='arrow-down' label="Withdraw" />
+                    <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#6236FF' iconColor='#FFFFFF' iconName='arrow-right' label="Send"/>
+                    <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#1DCC70' iconColor='#FFFFFF' iconName='credit-card' label="Cards"/>
+                    <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#FFB400' iconColor='#FFFFFF' iconName='exchange' label="Exchange"/>
+                </View>
             </View>
-            <Text style={styles.cardText}>Best Sellers</Text>
-            <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
-                <View style={{flexDirection: 'row'}}> 
-                    <View>
-                        <View style={{marginLeft: 17}}>
-                            <Image
-                                source={require('../images/vintage.png')}
-                            />    
-                        </View>  
-                    <View>
-                        <View>
-                            <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>Vintage Bra & Pant</Text>
-                        </View>  
-                        <View style={{flexDirection: 'row'}}>
-                            <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>$100</Text>
-                            <Text style={{marginLeft:17, fontSize: 12,  color: '#0037BA'}}>$121.86</Text>
-                        </View>
-                        <View style={{marginLeft:17, alignSelf: 'flex-start'}}>
-                            <Rate />
-                        </View>
-                    </View>
-                </View>
-                    <View>
-                        <View style={{marginLeft: 17}}>
-                            <Image
-                                source={require('../images/adidas.png')}
-                            />    
-                        </View>  
-                        <View>
-                            <View>
-                                <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>Vintage Bra & Pant</Text>
-                            </View>  
-                            <View style={{flexDirection: 'row'}}>
-                                <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>$100</Text>
-                                <Text style={{marginLeft:17, fontSize: 12,  color: '#0037BA'}}>$121.86</Text>
-                            </View>
-                            <View style={{marginLeft:17, alignSelf: 'flex-start'}}>
-                                <Rate />
-                            </View>
-                        </View>
-                    </View>
-                </View>
-                <View style={{flexDirection: 'row'}}> 
-                    <View>
-                        <View style={{marginLeft: 17}}>
-                            <Image
-                                source={require('../images/vintage.png')}
-                            />    
-                        </View>  
-                    <View>
-                        <View>
-                            <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>Vintage Bra & Pant</Text>
-                        </View>  
-                        <View style={{flexDirection: 'row'}}>
-                            <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>$100</Text>
-                            <Text style={{marginLeft:17, fontSize: 12,  color: '#0037BA'}}>$121.86</Text>
-                        </View>
-                        <View style={{marginLeft:17, alignSelf: 'flex-start'}}>
-                            <Rate />
-                        </View>
-                    </View>
-                </View>
-                    <View>
-                        <View style={{marginLeft: 17}}>
-                            <Image
-                                source={require('../images/adidas.png')}
-                            />    
-                        </View>  
-                        <View>
-                            <View>
-                                <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>Vintage Bra & Pant</Text>
-                            </View>  
-                            <View style={{flexDirection: 'row'}}>
-                                <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>$100</Text>
-                                <Text style={{marginLeft:17, fontSize: 12,  color: '#0037BA'}}>$121.86</Text>
-                            </View>
-                            <View style={{marginLeft:17, alignSelf: 'flex-start'}}>
-                                <Rate />
-                            </View>
-                        </View>
-                    </View>
-                </View>
-            </ScrollView>            
-        </View>
+        </View> 
     )
 }
 

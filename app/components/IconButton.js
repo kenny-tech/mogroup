@@ -4,14 +4,14 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 
 import styles from '../styles/style';
 
-const IconButton = ({ buttonTitle, buttonBgColor, buttonTextColor, iconName }) => {
+const IconButton = ({ buttonBgColor, iconName, buttonWidth, buttonHeight, iconColor, label }) => {
     return (
-        <TouchableOpacity style={[styles.button, {backgroundColor: buttonBgColor, marginTop: 12}]}>
-            <View style={{flexDirection:'row'}}>
-                <Icon name={iconName} size={20} color="#0037BA" style={{marginTop:5, paddingRight: 5}} />
-                <Text style={[styles.buttonText, {color: buttonTextColor}]}>{buttonTitle}</Text>
-            </View>
-        </TouchableOpacity>
+        <View>
+            <TouchableOpacity style={[styles.button, {backgroundColor: buttonBgColor, width:buttonWidth, height:buttonHeight, marginTop: 20, borderRadius: 10, padding:20}]}>
+                <Icon name={iconName} color={iconColor} size={10} />
+            </TouchableOpacity>
+            <Text style={{marginLeft: 18, marginTop: 10, alignSelf: 'center'}}>{label}</Text>
+        </View>
     )
 }
 
