@@ -7,8 +7,7 @@ const Panel = () => {
             style={{
                 width: 350,
                 height: 120,
-                borderTopLeftRadius: 10,
-                borderTopRightRadius: 10,
+                borderRadius: 10,
                 backgroundColor: '#FFFFFF',
                 alignSelf: 'center'
             }}

@@ -24,8 +24,8 @@ export default StyleSheet.create({
     },
     label: {
         lineHeight: 27,
-        marginLeft: 54,
-        marginRight: 54
+        marginLeft: 10,
+        marginRight: 15
     },
     blueBackgroundScreen: {
         backgroundColor: '#E5E5E5'
@@ -96,5 +96,8 @@ export default StyleSheet.create({
         width: 350,
         color: '#000',
     },
+    topMargin: {
+        marginTop: 15
+    }
 
 });
