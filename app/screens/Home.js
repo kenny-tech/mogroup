@@ -5,6 +5,7 @@ import IconButton from '../components/IconButton';
 import Summary from '../components/Summary';
 import Label from '../components/Label';
 import Transaction from '../components/Transaction';
+import styles from '../styles/style';
 
 const Home = () => {
 
@@ -75,7 +76,7 @@ const Home = () => {
                     </View>
                 </View>     
                 <Transaction iconName='phone' name='Amazon' description='Shopping' amount='150'  type='debit' />       
-                <Transaction iconName='phone' name='Apple' description='Shopping' amount='-120'  type='debit' />       
+                <Transaction iconName='phone' name='Apple   ' description='Shopping' amount='-120'  type='debit' />       
                 <View style={{marginTop: 15, marginHorizontal: 15, flexDirection: 'row'}}>
                     <View style={{marginRight: 130, marginBottom: 10}}>
                         <Label labelText='Latest News' labelTextColor='#000' labelSize={20} />
@@ -93,7 +94,7 @@ const Home = () => {
                                     />   
                                 </View>  
                             <View>
-                            <View>
+                                <View style={styles.cardTextView}>
                                     <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>Rules you need to know</Text>
                                 </View>  
                             </View>
@@ -107,7 +108,21 @@ const Home = () => {
                                     />   
                                 </View>  
                             <View>
+                                <View style={styles.cardTextView}>
+                                    <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>Rules you need to know. These are the rules.</Text>
+                                </View>  
+                            </View>
+                        </View>
+                    </View>
+                    <View style={{flexDirection: 'row'}}> 
                             <View>
+                                <View style={{marginLeft: 17}}>
+                                    <Image
+                                        source={require('../images/adidas.png')}
+                                    />   
+                                </View>  
+                            <View>
+                                <View style={styles.cardTextView}>
                                     <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>Rules you need to know</Text>
                                 </View>  
                             </View>
@@ -121,7 +136,7 @@ const Home = () => {
                                     />   
                                 </View>  
                             <View>
-                            <View>
+                                <View style={styles.cardTextView}>
                                     <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>Rules you need to know</Text>
                                 </View>  
                             </View>
@@ -135,21 +150,7 @@ const Home = () => {
                                     />   
                                 </View>  
                             <View>
-                            <View>
-                                    <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>Rules you need to know</Text>
-                                </View>  
-                            </View>
-                        </View>
-                    </View>
-                    <View style={{flexDirection: 'row'}}> 
-                            <View>
-                                <View style={{marginLeft: 17}}>
-                                    <Image
-                                        source={require('../images/adidas.png')}
-                                    />   
-                                </View>  
-                            <View>
-                            <View>
+                                <View style={styles.cardTextView}>
                                     <Text style={{marginLeft:17, fontSize: 12,  color: '#000'}}>Rules you need to know</Text>
                                 </View>  
                             </View>

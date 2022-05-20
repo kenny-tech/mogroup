@@ -98,6 +98,12 @@ export default StyleSheet.create({
     },
     topMargin: {
         marginTop: 15
+    },
+    cardTextView: {
+        backgroundColor: '#FFF', 
+        width: 165, 
+        height: 50, 
+        paddingTop: 10
     }
 
 });
