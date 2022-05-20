@@ -128,13 +128,13 @@ const App = () => {
         <Stack.Screen name="Signup" component={SignupScreen} />
       </Stack.Navigator> */}
       <Drawer.Navigator initialRouteName="Home">
-        <Drawer.Screen name="Home" component={StackNavigation} />
-
+        {/* <Drawer.Screen name="Home" component={StackNavigation} /> */}
+        <Drawer.Screen name="Home" component={BottomTab} options={{headerShown: false}} />
+        <Drawer.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
   
 };
-
 
 export default App;

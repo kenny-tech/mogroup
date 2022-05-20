@@ -8,18 +8,15 @@ export default StyleSheet.create({
         marginRight: 54
     },
     button: {
-        alignItems: 'center',
+        alignItems: 'flex-start',
         backgroundColor: '#0037BA',
-        padding: 10,
         marginTop: 15,
-        marginLeft: 10,
-        marginRight: 10,
         borderRadius: 10,
         alignSelf: 'auto',
         width: 280,
         height: 52,
-        marginLeft: 54,
-        marginRight: 54
+        marginLeft: 25,
+        marginRight: 10
     },
     buttonText: {
         fontSize: 18,
@@ -27,8 +24,8 @@ export default StyleSheet.create({
     },
     label: {
         lineHeight: 27,
-        marginLeft: 54,
-        marginRight: 54
+        marginLeft: 10,
+        marginRight: 15
     },
     blueBackgroundScreen: {
         backgroundColor: '#E5E5E5'
@@ -99,5 +96,14 @@ export default StyleSheet.create({
         width: 350,
         color: '#000',
     },
+    topMargin: {
+        marginTop: 15
+    },
+    cardTextView: {
+        backgroundColor: '#FFF', 
+        width: 165, 
+        height: 50, 
+        paddingTop: 10
+    }
 
 });
