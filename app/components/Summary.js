@@ -15,7 +15,7 @@ const Summary = ({ label, amount, amountColor}) => {
             }}
         >
             <Text>{label}</Text>
-            <Text style={{color: amountColor, fontSize: 30}}>{amount}</Text>
+            <Text style={{color: amountColor, fontSize: 27}}>{amount}</Text>
         </View>
     )
 }
