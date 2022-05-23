@@ -9,9 +9,9 @@ import WelcomeScreen from './app/screens/Welcome';
 import SigninScreen from './app/screens/Signin';
 import SignupScreen from './app/screens/Signup';
 import HomeScreen from './app/screens/Home';
-import CategoryScreen from './app/screens/Category';
-import WishlistScreen from './app/screens/Wishlist';
-import ProfileScreen from './app/screens/Profile';
+import RealEstateScreen from './app/screens/RealEstate';
+import SavingsScreen from './app/screens/Savings';
+import InvestmentScreen from './app/screens/Investment';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -38,23 +38,11 @@ const BottomTab = () => {
           tabBarActiveTintColor: '#0037BA',
           tabBarInactiveTintColor: '#997E7E'
       }}/>
-      <Tab.Screen 
-        name="Category" component={CategoryScreen} options={{
-        tabBarLabel: 'Category',
-        tabBarIcon: ({ focused, color, size }) => {
-          const icon = focused ? 'list' : 'list';
-          return (
-            <Icon name={icon} color={color} size={size} />
-          );
-        },
-        tabBarActiveTintColor: '#0037BA',
-        tabBarInactiveTintColor: '#997E7E'
-      }}/>
        <Tab.Screen 
-        name="Wishlist" component={WishlistScreen} options={{
-        tabBarLabel: 'Wishlist',
+        name="Savings" component={SavingsScreen} options={{
+        tabBarLabel: 'Savings',
         tabBarIcon: ({ focused, color, size }) => {
-          const icon = focused ? 'heart' : 'heart';
+          const icon = focused ? 'money' : 'money';
           return (
             <Icon name={icon} color={color} size={size} />
           );
@@ -63,10 +51,22 @@ const BottomTab = () => {
         tabBarInactiveTintColor: '#997E7E'
       }}/>
       <Tab.Screen 
-        name="Profile" component={ProfileScreen} options={{
-        tabBarLabel: 'Profile',
+        name="Investment" component={InvestmentScreen} options={{
+        tabBarLabel: 'Investment',
         tabBarIcon: ({ focused, color, size }) => {
-          const icon = focused ? 'user-circle' : 'user-circle';
+          const icon = focused ? 'money' : 'money';
+          return (
+            <Icon name={icon} color={color} size={size} />
+          );
+        },
+        tabBarActiveTintColor: '#0037BA',
+        tabBarInactiveTintColor: '#997E7E'
+      }}/>
+      <Tab.Screen 
+        name="Real Estate" component={RealEstateScreen} options={{
+        tabBarLabel: 'Real Estate',
+        tabBarIcon: ({ focused, color, size }) => {
+          const icon = focused ? 'building' : 'building';
           return (
             <Icon name={icon} color={color} size={size} />
           );
@@ -130,7 +130,7 @@ const App = () => {
       <Drawer.Navigator initialRouteName="Home">
         {/* <Drawer.Screen name="Home" component={StackNavigation} /> */}
         <Drawer.Screen name="Home" component={BottomTab} options={{headerShown: false}} />
-        <Drawer.Screen name="Profile" component={ProfileScreen} options={{headerShown: false}} />
+        <Drawer.Screen name="Investment" component={InvestmentScreen} options={{headerShown: false}} />
       </Drawer.Navigator>
     </NavigationContainer>
   );

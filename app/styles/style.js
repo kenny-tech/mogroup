@@ -101,9 +101,17 @@ export default StyleSheet.create({
     },
     cardTextView: {
         backgroundColor: '#FFF', 
-        width: 165, 
+        width: 150, 
         height: 50, 
-        paddingTop: 10
+        paddingTop: 10,
+        marginHorizontal:15
+    },
+    realEstateCardText: {
+        backgroundColor: '#FFF', 
+        width: 370, 
+        height: 50, 
+        paddingTop: 10,
+        marginHorizontal:15
     }
 
 });
