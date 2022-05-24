@@ -5,7 +5,7 @@ const Summary = ({ label, amount, amountColor}) => {
     return (
         <View
             style={{
-                width: 165,
+                width: 162,
                 height: 100,
                 borderTopLeftRadius: 10,
                 borderTopRightRadius: 10,

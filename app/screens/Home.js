@@ -59,15 +59,17 @@ const Home = () => {
                         <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#FFB400' iconColor='#FFFFFF' iconName='building' label="Real Estate"/>
                     </View>
                 </View>
-                <View style={{marginTop: 15, marginHorizontal: 17, flexDirection: 'row'}}>
-                    <Summary label='Income' amount='N 552.95' amountColor='#1DCC70' />
-                    <Summary label='Total Loan' amount='N 86.45' amountColor='#FF396F' />
+                <View style={{marginHorizontal: 17}}>
+                    <View style={{marginTop: 15, marginHorizontal: 17, flexDirection: 'row'}}>
+                        <Summary label='Income' amount='N 552.95' amountColor='#1DCC70' />
+                        <Summary label='Total Loan' amount='N 86.45' amountColor='#FF396F' />
+                    </View>
+                    <View style={{marginTop: 15, marginHorizontal: 17, flexDirection: 'row'}}>
+                        <Summary label='Total Savings' amount='N 552.95' amountColor='#000' />
+                        <Summary label='Total Expense' amount='N 86.45' amountColor='#000' />
+                    </View>
                 </View>
-                <View style={{marginTop: 15, marginHorizontal: 17, flexDirection: 'row'}}>
-                    <Summary label='Total Savings' amount='N 552.95' amountColor='#000' />
-                    <Summary label='Total Expense' amount='N 86.45' amountColor='#000' />
-                </View>
-                <View style={{marginTop: 15, marginHorizontal: 15, flexDirection: 'row'}}>
+                <View style={{marginTop: 15, marginHorizontal: 20, flexDirection: 'row'}}>
                     <View style={{marginRight: 130, marginBottom: 10}}>
                         <Label labelText='Transactions' labelTextColor='#000' labelSize={20} />
                     </View>
@@ -77,7 +79,7 @@ const Home = () => {
                 </View>     
                 <Transaction iconName='phone' name='Amazon' description='Shopping' amount='150'  type='debit' />       
                 <Transaction iconName='phone' name='Apple   ' description='Shopping' amount='-120'  type='debit' />       
-                <View style={{marginTop: 15, marginHorizontal: 15, flexDirection: 'row'}}>
+                <View style={{marginTop: 17, marginHorizontal: 20, flexDirection: 'row'}}>
                     <View style={{marginRight: 130, marginBottom: 10}}>
                         <Label labelText='Latest News' labelTextColor='#000' labelSize={20} />
                     </View>
@@ -86,7 +88,7 @@ const Home = () => {
                     </View>
                 </View>  
                 <ScrollView horizontal={true} showsHorizontalScrollIndicator={true}>
-                    <View style={{flexDirection: 'row'}}> 
+                    <View style={{flexDirection: 'row', marginLeft: 17}}> 
                             <View>
                                 <View style={{marginLeft: 17}}>
                                     <Image
