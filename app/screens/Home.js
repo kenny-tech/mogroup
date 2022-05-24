@@ -5,6 +5,7 @@ import IconButton from '../components/IconButton';
 import Summary from '../components/Summary';
 import Label from '../components/Label';
 import Transaction from '../components/Transaction';
+import SavingGoals from '../components/SavingGoals';
 import styles from '../styles/style';
 
 const Home = () => {
@@ -60,11 +61,11 @@ const Home = () => {
                     </View>
                 </View>
                 <View style={{marginHorizontal: 17}}>
-                    <View style={{marginTop: 15, marginHorizontal: 17, flexDirection: 'row'}}>
+                    <View style={{marginTop: 15, marginHorizontal: 8, flexDirection: 'row'}}>
                         <Summary label='Income' amount='N 552.95' amountColor='#1DCC70' />
                         <Summary label='Total Loan' amount='N 86.45' amountColor='#FF396F' />
                     </View>
-                    <View style={{marginTop: 15, marginHorizontal: 17, flexDirection: 'row'}}>
+                    <View style={{marginTop: 15, marginHorizontal: 8, flexDirection: 'row'}}>
                         <Summary label='Total Savings' amount='N 552.95' amountColor='#000' />
                         <Summary label='Total Expense' amount='N 86.45' amountColor='#000' />
                     </View>
@@ -77,8 +78,25 @@ const Home = () => {
                         <Label labelText='View All' labelTextColor='#6236FF' labelSize={12} />
                     </View>
                 </View>     
-                <Transaction iconName='phone' name='Amazon' description='Shopping' amount='150'  type='debit' />       
-                <Transaction iconName='phone' name='Apple   ' description='Shopping' amount='-120'  type='debit' />       
+                <View>
+                    <Transaction iconName='phone' name='Amazon' description='Shopping' amount='150'  type='debit' />       
+                    <Transaction iconName='phone' name='Apple   ' description='Shopping' amount='-120'  type='debit' />       
+                </View>
+
+                <View style={{marginTop: 15, marginHorizontal: 20, flexDirection: 'row'}}>
+                    <View style={{marginRight: 130, marginBottom: 10}}>
+                        <Label labelText='Saving Goals' labelTextColor='#000' labelSize={20} />
+                    </View>
+                    <View>
+                        <Label labelText='View All' labelTextColor='#6236FF' labelSize={12} />
+                    </View>
+                </View>     
+                <View>
+                    <SavingGoals name='Gaming Console' description='Gaming' amount='499' />       
+                    <SavingGoals name='New House' description='Living' amount='100,000' />       
+                    <SavingGoals name='Sport Car' description='Lifestyle' amount='42,500' />       
+                </View>
+                
                 <View style={{marginTop: 17, marginHorizontal: 20, flexDirection: 'row'}}>
                     <View style={{marginRight: 130, marginBottom: 10}}>
                         <Label labelText='Latest News' labelTextColor='#000' labelSize={20} />
