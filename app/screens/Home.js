@@ -92,9 +92,9 @@ const Home = () => {
                     </View>
                 </View>     
                 <View>
-                    <SavingGoals name='Gaming Console' description='Gaming' amount='499' />       
-                    <SavingGoals name='New House' description='Living' amount='100,000' />       
-                    <SavingGoals name='Sport Car' description='Lifestyle' amount='42,500' />       
+                    <SavingGoals name='Gaming Console' description='Gaming' amount='499' percentageDone={85} />   
+                    <SavingGoals name='New House' description='Living' amount='100,000' percentageDone={55}/>       
+                    <SavingGoals name='Sport Car    ' description='Lifestyle' amount='42,500' percentageDone={15} />  
                 </View>
                 
                 <View style={{marginTop: 17, marginHorizontal: 20, flexDirection: 'row'}}>
