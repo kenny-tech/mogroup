@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 import { View, Text, ScrollView, Image } from 'react-native';
 import IconButton from '../components/IconButton';
@@ -8,7 +9,24 @@ import Transaction from '../components/Transaction';
 import SavingGoals from '../components/SavingGoals';
 import styles from '../styles/style';
 
-const Home = () => {
+
+const Home = ({ navigation }) => {
+
+    useEffect(() => {
+        navigation.setOptions({
+          headerRight: () => (
+            <View style={{flexDirection: 'row'}}>
+                <Icon name="bell" size={30} style={{ marginRight: 30, color: '#fff' }}/>
+                <View style={{  marginRight: 25 }}>
+                    <Image
+                        source={require('../images/adidas.png')}
+                        style={{width: 25, height: 30, borderRadius: 10}}
+                    />   
+                </View> 
+            </View>
+          ),
+        });
+    }, [navigation]);
 
     return (
         <View style={{flex: 1}}>
@@ -94,7 +112,7 @@ const Home = () => {
                 <View>
                     <SavingGoals name='Gaming Console' description='Gaming' amount='499' percentageDone={85} />   
                     <SavingGoals name='New House' description='Living' amount='100,000' percentageDone={55}/>       
-                    <SavingGoals name='Sport Car    ' description='Lifestyle' amount='42,500' percentageDone={15} />  
+                    <SavingGoals name='Sport Car    ' description='Lifestyle' amount='42,500' percentageDone={70} />  
                 </View>
                 
                 <View style={{marginTop: 17, marginHorizontal: 20, flexDirection: 'row'}}>
