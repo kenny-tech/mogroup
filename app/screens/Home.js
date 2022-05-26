@@ -9,24 +9,22 @@ import Transaction from '../components/Transaction';
 import SavingGoals from '../components/SavingGoals';
 import styles from '../styles/style';
 
+const Home = ({ navigation }) => { useEffect(() => {
 
-const Home = ({ navigation }) => {
-
-    useEffect(() => {
-        navigation.setOptions({
-          headerRight: () => (
-            <View style={{flexDirection: 'row'}}>
-                <Icon name="bell" size={30} style={{ marginRight: 30, color: '#fff' }}/>
-                <View style={{  marginRight: 25 }}>
-                    <Image
-                        source={require('../images/adidas.png')}
-                        style={{width: 25, height: 30, borderRadius: 10}}
-                    />   
-                </View> 
-            </View>
-          ),
-        });
-    }, [navigation]);
+    navigation.setOptions({
+      headerRight: () => (
+        <View style={{flexDirection: 'row'}}>
+            <Icon name="bell" size={30} style={{ marginRight: 30, color: '#fff' }}/>
+            <View style={{  marginRight: 30 }}>
+                <Image
+                    source={require('../images/adidas.png')}
+                    style={{width: 25, height: 30, borderRadius: 10}}
+                />   
+            </View> 
+        </View>
+      ),
+    });
+}, [navigation]);
 
     return (
         <View style={{flex: 1}}>
@@ -44,8 +42,8 @@ const Home = ({ navigation }) => {
                     >
                         <View style={{flexDirection: 'row'}}>
                             <View style={{marginRight: 85}}>
-                                <Text style={{paddingHorizontal: 15, paddingTop: 15, fontSize: 14}}>Total Investment</Text>
-                                <Text style={{paddingLeft: 15, paddingRight: 15, fontSize: 30, fontWeight: 'bold'}}>$2,562.50</Text>
+                                <Text style={{paddingHorizontal: 15, paddingTop: 15, fontSize: 14, color: '#000'}}>Total Investment</Text>
+                                <Text style={{paddingLeft: 15, paddingRight: 15, fontSize: 30, fontWeight: 'bold', color: '#000'}}>$2,562.50</Text>
                             </View>
                             <View>
                                 <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#EDEDF5' iconName='plus' />
@@ -112,7 +110,7 @@ const Home = ({ navigation }) => {
                 <View>
                     <SavingGoals name='Gaming Console' description='Gaming' amount='499' percentageDone={85} />   
                     <SavingGoals name='New House' description='Living' amount='100,000' percentageDone={55}/>       
-                    <SavingGoals name='Sport Car    ' description='Lifestyle' amount='42,500' percentageDone={70} />  
+                    <SavingGoals name='Sport Car    ' description='Lifestyle' amount='42,500' percentageDone={15} />  
                 </View>
                 
                 <View style={{marginTop: 17, marginHorizontal: 20, flexDirection: 'row'}}>

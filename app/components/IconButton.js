@@ -10,7 +10,7 @@ const IconButton = ({ buttonBgColor, iconName, buttonWidth, buttonHeight, iconCo
             <TouchableOpacity style={[styles.button, {backgroundColor: buttonBgColor, width:buttonWidth, height:buttonHeight, marginTop: 20, borderRadius: 10, padding:20, marginLeft: 18}]}>
                 <Icon name={iconName} color={iconColor} size={10} />
             </TouchableOpacity>
-            <Text style={{marginLeft: 1, marginTop: 10, alignSelf: 'center'}}>{label}</Text>
+            <Text style={{marginLeft: 1, marginTop: 10, alignSelf: 'center', color: '#000'}}>{label}</Text>
         </View>
     )
 }

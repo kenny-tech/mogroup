@@ -14,7 +14,7 @@ const Summary = ({ label, amount, amountColor}) => {
                 padding: 20
             }}
         >
-            <Text>{label}</Text>
+            <Text style={{color: '#000'}}>{label}</Text>
             <Text style={{color: amountColor, fontSize: 27}}>{amount}</Text>
         </View>
     )
