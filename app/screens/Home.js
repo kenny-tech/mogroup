@@ -37,7 +37,8 @@ const Home = ({ navigation }) => { useEffect(() => {
                             borderTopLeftRadius: 10,
                             borderTopRightRadius: 10,
                             backgroundColor: '#FFFFFF',
-                            alignSelf: 'center'
+                            alignSelf: 'center',
+                            marginTop: 5
                         }}
                     >
                         <View style={{flexDirection: 'row'}}>

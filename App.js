@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { Image } from 'react-native';
 
 import WelcomeScreen from './app/screens/Welcome';
 import SigninScreen from './app/screens/Signin';
@@ -25,6 +26,9 @@ const BottomTab = () => {
         backgroundColor: '#0037BA',
       },
       headerTintColor: '#fff',
+      // title: <Image style={{ width: 50, height: 55 }} source={require('./app/images/logo.png')} />
+      title: 'Home'
+
     }}>
       <Tab.Screen 
           name="Home" component={HomeScreen} options={{
