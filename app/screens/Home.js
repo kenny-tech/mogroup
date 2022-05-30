@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Modal from "react-native-modal";
 
-import { View, Text, ScrollView, Image } from 'react-native';
+import { View, Text, ScrollView, Image, Button, TextInput, TouchableOpacity } from 'react-native';
 import IconButton from '../components/IconButton';
 import Summary from '../components/Summary';
 import Label from '../components/Label';
@@ -24,7 +25,14 @@ const Home = ({ navigation }) => { useEffect(() => {
         </View>
       ),
     });
-}, [navigation]);
+    }, [navigation]);
+
+    const [isModalVisible, setModalVisible] = useState(false);
+    const [amount, setAmount] = useState('');
+
+    const toggleModal = () => {
+        setModalVisible(!isModalVisible);
+    };
 
     return (
         <View style={{flex: 1}}>
@@ -44,10 +52,12 @@ const Home = ({ navigation }) => { useEffect(() => {
                         <View style={{flexDirection: 'row'}}>
                             <View style={{marginRight: 85}}>
                                 <Text style={{paddingHorizontal: 15, paddingTop: 15, fontSize: 14, color: '#000'}}>Total Investment</Text>
-                                <Text style={{paddingLeft: 15, paddingRight: 15, fontSize: 30, fontWeight: 'bold', color: '#000'}}>$2,562.50</Text>
+                                <Text style={{paddingLeft: 15, paddingRight: 15, fontSize: 30, fontWeight: 'bold', color: '#000'}}>N2,562.50</Text>
                             </View>
                             <View>
-                                <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#EDEDF5' iconName='plus' />
+                                <TouchableOpacity onPress={() => toggleModal()}>
+                                    <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#EDEDF5' iconName='plus' onPress={() => toggleModal()} />
+                                </TouchableOpacity>
                             </View>
                         </View>
                         <View
@@ -195,8 +205,37 @@ const Home = ({ navigation }) => { useEffect(() => {
                     </View>
                 </ScrollView>   
             </ScrollView>
+            {/* <Button title="Show modal" onPress={() => toggleModal()} /> */}
+
+            <View>
+                <Modal 
+                    isVisible={isModalVisible} 
+                    hasBackdrop={true} 
+                    onBackdropPress={() => setModalVisible(false)} 
+                    avoidKeyboard={true}
+                    swipeDirection='down' 
+                    style={{ justifyContent: 'flex-end' }}
+                >
+                    <View style={{backgroundColor: '#fff', margin: 10, padding: 10, width: 500, alignSelf: 'center'}}>
+                        <View style={{alignItems: 'center'}}>
+                            <Text style={{color: '#000', fontSize: 24, marginVertical: 10}}>ADD BALANCE</Text>
+                            <TextInput
+                                value={amount}
+                                onChangeText={(amount) => setAmount({ amount })}
+                                placeholder={'Enter Amount'}
+                                style={styles.input}
+                            />
+                            <View style={{width: 300, height: 50, borderRadius: 10, backgroundColor: '#0037BA', alignItems: 'center'}}>
+                                <Text style={{color: '#fff', fontSize: 24, paddingTop: 10}}>Submit</Text>
+                            </View>
+                        </View>
+                    </View>
+                </Modal>
+            </View>
         </View> 
     )
+
 }
+
 
 export default Home;
