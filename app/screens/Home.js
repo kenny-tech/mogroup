@@ -81,10 +81,18 @@ const Home = ({ navigation }) => { useEffect(() => {
                     }}
                 >
                     <View style={{flexDirection: 'row', alignSelf: 'center'}}>
-                        <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#FF396F' iconColor='#FFFFFF' iconName='money' label="Savings" />
-                        <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#6236FF' iconColor='#FFFFFF' iconName='building' label="Investment"/>
-                        <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#1DCC70' iconColor='#FFFFFF' iconName='credit-card' label="Loan"/>
-                        <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#FFB400' iconColor='#FFFFFF' iconName='building' label="Real Estate"/>
+                        <TouchableOpacity onPress={() => toggleModal()}>
+                            <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#FF396F' iconColor='#FFFFFF' iconName='money' label="Savings" />
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => toggleModal()}>
+                            <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#6236FF' iconColor='#FFFFFF' iconName='building' label="Investment"/>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => toggleModal()}>
+                            <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#1DCC70' iconColor='#FFFFFF' iconName='credit-card' label="Loan"/>
+                        </TouchableOpacity>
+                        <TouchableOpacity onPress={() => toggleModal()}>
+                            <IconButton buttonWidth={50} buttonHeight={50} buttonBgColor='#FFB400' iconColor='#FFFFFF' iconName='building' label="Real Estate"/>
+                        </TouchableOpacity>
                     </View>
                 </View>
                 <View style={{marginHorizontal: 17}}>

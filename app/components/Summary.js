@@ -7,8 +7,7 @@ const Summary = ({ label, amount, amountColor}) => {
             style={{
                 width: 162,
                 height: 100,
-                borderTopLeftRadius: 10,
-                borderTopRightRadius: 10,
+                borderRadius: 10,
                 backgroundColor: '#FFFFFF',
                 marginRight: 20,
                 padding: 20
