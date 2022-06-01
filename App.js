@@ -40,7 +40,7 @@ const BottomTab = () => {
             );
           },
           tabBarActiveTintColor: '#0037BA',
-          tabBarInactiveTintColor: '#997E7E'
+          tabBarInactiveTintColor: '#997E7E',
       }}/>
        <Tab.Screen 
         name="Savings" component={SavingsScreen} options={{
@@ -52,7 +52,8 @@ const BottomTab = () => {
           );
         },
         tabBarActiveTintColor: '#0037BA',
-        tabBarInactiveTintColor: '#997E7E'
+        tabBarInactiveTintColor: '#997E7E',
+        title: 'Savings'
       }}/>
       <Tab.Screen 
         name="Investment" component={InvestmentScreen} options={{
@@ -64,7 +65,8 @@ const BottomTab = () => {
           );
         },
         tabBarActiveTintColor: '#0037BA',
-        tabBarInactiveTintColor: '#997E7E'
+        tabBarInactiveTintColor: '#997E7E',
+        title: 'Investment'
       }}/>
       <Tab.Screen 
         name="Real Estate" component={RealEstateScreen} options={{
@@ -76,7 +78,9 @@ const BottomTab = () => {
           );
         },
         tabBarActiveTintColor: '#0037BA',
-        tabBarInactiveTintColor: '#997E7E'
+        tabBarInactiveTintColor: '#997E7E',
+        title: 'Real Estate'
+
       }}/>
     </Tab.Navigator>
   );
@@ -109,10 +113,40 @@ const StackNavigation = () => {
 
 const App = () => {
 
+  // return (
+  //   <NavigationContainer>
+  //     {/* <Stack.Navigator 
+  //       initialRouteName="Welcome"
+  //       screenOptions={{
+  //         headerShown: false,
+  //       }}
+  //     >
+  //       <Stack.Screen
+  //         name="Home"
+  //         component={BottomTab}
+  //         options={{ 
+  //           headerShown: false, 
+  //           headerStyle: {
+  //             backgroundColor: '#f4511e',
+  //           },
+  //         }}
+  //       />
+  //       <Stack.Screen name="Welcome" component={WelcomeScreen} />
+  //       <Stack.Screen name="Signin" component={SigninScreen} />
+  //       <Stack.Screen name="Signup" component={SignupScreen} />
+  //     </Stack.Navigator> */}
+  //     <Drawer.Navigator initialRouteName="Home">
+  //       {/* <Drawer.Screen name="Home" component={StackNavigation} /> */}
+  //       <Drawer.Screen name="Home" component={BottomTab} options={{headerShown: false}} />
+  //       <Drawer.Screen name="Investment" component={InvestmentScreen} options={{headerShown: false}} />
+  //     </Drawer.Navigator>
+  //   </NavigationContainer>
+  // );
+
   return (
     <NavigationContainer>
-      {/* <Stack.Navigator 
-        initialRouteName="Welcome"
+      <Stack.Navigator 
+        initialRouteName="Home"
         screenOptions={{
           headerShown: false,
         }}
@@ -127,15 +161,10 @@ const App = () => {
             },
           }}
         />
-        <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        {/* <Stack.Screen name="Welcome" component={WelcomeScreen} />
         <Stack.Screen name="Signin" component={SigninScreen} />
-        <Stack.Screen name="Signup" component={SignupScreen} />
-      </Stack.Navigator> */}
-      <Drawer.Navigator initialRouteName="Home">
-        {/* <Drawer.Screen name="Home" component={StackNavigation} /> */}
-        <Drawer.Screen name="Home" component={BottomTab} options={{headerShown: false}} />
-        <Drawer.Screen name="Investment" component={InvestmentScreen} options={{headerShown: false}} />
-      </Drawer.Navigator>
+        <Stack.Screen name="Signup" component={SignupScreen} /> */}
+      </Stack.Navigator>
     </NavigationContainer>
   );
   
