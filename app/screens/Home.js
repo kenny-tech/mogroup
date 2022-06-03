@@ -95,7 +95,7 @@ const Home = ({ navigation }) => { useEffect(() => {
                         </TouchableOpacity>
                     </View>
                 </View>
-                <View style={{marginHorizontal: 17}}>
+                <View style={{marginHorizontal: 15}}>
                     <View style={{marginTop: 15, marginHorizontal: 8, flexDirection: 'row'}}>
                         <Summary label='Income' amount='N 552.95' amountColor='#1DCC70' />
                         <Summary label='Total Loan' amount='N 86.45' amountColor='#FF396F' />
