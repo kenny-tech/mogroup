@@ -121,6 +121,19 @@ export default StyleSheet.create({
         borderColor: 'black',
         marginBottom: 10,
         width: 300
-      },
+    },
+    input1: {
+        height: 40,
+        width: 300,
+        borderWidth: 1,
+        borderBottomColor: '#fff',
+        borderTopWidth: 0,
+        borderLeftWidth: 0,
+        borderRightWidth: 0,
+        marginLeft: 54,
+        marginBottom: 10,
+        backgroundColor: '#fff',
+        borderRadius: 10
+    },
 
 });
