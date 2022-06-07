@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Icon from 'react-native-vector-icons/FontAwesome';
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import SplashScreen from 'react-native-splash-screen'
 
 import WelcomeScreen from './app/screens/Welcome';
 import SigninScreen from './app/screens/Signin';
@@ -111,6 +112,10 @@ const StackNavigation = () => {
 }
 
 const App = () => {
+
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
 
   // return (
   //   <NavigationContainer>
